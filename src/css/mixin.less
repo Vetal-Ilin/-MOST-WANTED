@@ -1,0 +1,36 @@
+@import "variables";
+
+/* 1. Кнопка button */
+
+    .button() {
+
+        background-color: @bc-button; /* variables 5.2. */
+        color: @color-text-1; /* variables 3.1 */
+        border: none;
+        font-family: @ff-text-2; /* variables 1.1.  */
+        cursor: pointer;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+/* 2. Кнопка "Закрыть"  */
+
+    .button-close() {
+
+        background-color: @bc-button-close; /* variables 5.3. */
+        border: none;
+        color: @color-text-1; /* variables 3.1 */
+        padding: 10px 10px;
+        font-family:  @ff-text-1; /* variables 1.1 */
+        text-transform: uppercase;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+        @media screen and (min-width: 992px) {
+            
+
+            top: 0;
+        }
+    }
