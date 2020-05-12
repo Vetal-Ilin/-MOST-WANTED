@@ -306,25 +306,23 @@
 
         .main-services__content {
             
-        
 
             &__list {
 
                 display: flex;
-                position: relative;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 width: 100%;
 
+
                 &__item {
 
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-end;
                     align-items: center;
                     width: 49%;
-                    height: 150px;
                     margin: 3px 3px 3px 3px;
                     padding-top: 50px;
                     
@@ -346,11 +344,13 @@
                     &__popup-3,
                     &__popup-4 {
 
-                        
+                        position: absolute;
                         height: 100%;
                         right: -150%;
+                        top: 0;
                         padding: 0;
                         background-color: @bc-main-services-popup-768px; /* variables 4.8.1. */
+                        
 
                         &__button-close {
 
@@ -367,64 +367,6 @@
                 }
             }
         }
-    }
-
-    
-
-    @media  screen and (min-width: 992px) and (min-height:600px ) {
-
-        overflow-x: hidden;
-        z-index: 10;
-        
-        
-        .main-services__content {
-            
-            
-
-            &__list {
-
-                &__item {
-                    
-                    height: 150px;
-                }
-            }
-        }
-        
-    }
-
-    @media  screen and (min-width: 992px) and (min-height:700px ) {
-        
-        
-        .main-services__content {
-            
-            
-
-            &__list {
-
-                &__item {
-                    
-                    height: 160px;
-                }
-            }
-        }
-    }
-
-    @media  screen and (min-width: 992px) and (min-height:800px ) {
-        
-        
-        .main-services__content {
-            
-            
-
-            &__list {
-
-                &__item {
-                    
-                    height: 180px;
-                }
-            }
-        }
-        
     }
 }
 

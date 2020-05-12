@@ -26,6 +26,26 @@ $(document).ready(function() {
         $('.main-services__content__list__item__popup-1').removeClass('open-popup');
     });
 
+
+    /* Скрипт для уравнивания блоков по высоте .main-services__content__list__item */
+    $.fn.equivalent = function (){
+      
+        var $blocks = $(this),
+        maxH    = $blocks.eq(0).height();
+
+        $blocks.each(function() {
+        
+            if ( $(this).height() > maxH ) {
+                maxH = $(this).height();
+            }  
+
+        });
+
+        $blocks.height(maxH);
+    }
+    
+    $('.item-height').equivalent();
+
         /* выездная диагностика */
     $('#detailed-2').click(function(event) {
         $('.main-services__content__list__item__popup-2').addClass('open-popup');
