@@ -4,7 +4,7 @@ $(document).ready(function() {
     /* Cкрипт для меню бургер  */
     $('.header-major__burger').click(function(event) {
         $('.header-major__burger, .header-major__burger__span').toggleClass('active');
-        $('.header-major__menu__nav, #main-advantage').toggleClass('open-nav');
+        $('.header-major__menu__nav, #main-advantage, #main-services').toggleClass('open-nav');
     });
 
     /* Cкрипт для меню form  */
