@@ -775,11 +775,11 @@
                     font-family: @ff-text-1; /* variables 1.1 */
                     color: @color-text-1; /* variables 3.1 */
                     margin: 0;
-                    background-color: rgba(44, 171, 168, 0.5);
+                    background-color: @icon-map; /* variables 5.8. */ 
 
                     &.active-map-icon {
 
-                        background-color: rgba(44, 171, 168, 1.0);
+                        background-color:  @icon-map-active; /* variables 5.9. */ 
                     }
                 }
             }
@@ -792,7 +792,7 @@
                 position: absolute;
                 top: 0;
                 left: -100%;
-                background-image: url('../../build/img/main-contacts__content__map.png');
+                background-image: @bc-image-map-1; /* variables 6.2. */
                 background-position: center;
                 background-size: 100%;
                 background-repeat: no-repeat;
@@ -811,7 +811,7 @@
                 position: absolute;
                 top: 0;
                 left: -100%;
-                background-image: url('../../build/img/main-contacts__content__map-2.png');
+                background-image: @bc-image-map-2; /* variables 6.2. */
                 background-position: center;
                 background-size: 100%;
                 background-repeat: no-repeat;
@@ -830,7 +830,7 @@
                 position: absolute;
                 top: 0;
                 left: -100%;
-                background-image: url('../../build/img/main-contacts__content__map-3.png');
+                background-image: @bc-image-map-3; /* variables 6.2. */
                 background-position: center;
                 background-size: 100%;
                 background-repeat: no-repeat;
