@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="build/css/style.min.css">
     <meta name="description" content="ПОДБЕРЕМ ДЛЯ ВАС АВТОМОБИЛЬ. Найдем, проверим и поможем купить.">
-    <meta name="keywords" content="автомобиль, найти, подобрать, купить, Магнитогорск"> 
+    <meta name="keywords" content="most, wanted, 174, автомобиль, найти, подобрать, купить, Магнитогорск"> 
     <title>MOST WANTED</title>
   </head>
   <body>
@@ -53,12 +53,38 @@
       <section class="main-major__form">
         <button id="close" class="main-major__form__button-close">Закрыть</button>
 
-        <form action="send.php" method="POST">
+
+        <?php
+          //проверяем, существуют ли переменные в массиве POST
+          if(!isset($_POST['phone']) and !isset($_POST['name'])){
+        ?>
+        <form action="index.php" method="post">
           <input type="tel" name="phone" placeholder="Введите свой номер телефона*" required>
           <input type="text" name="name" placeholder="Введите свое имя*" required>
           <textarea name="message"   rows="10" placeholder="Можете кратко описать автомобиль который вы ищете"></textarea>
           <input type="submit" id="send" name="submit" value="Отправить">
-        </form>
+        </form> <?php
+            } else {
+            //показываем форму
+            $phone = $_POST['phone'];
+            $name = $_POST['name'];
+            $message = $_POST['message'];
+            $phone = htmlspecialchars($phone);
+            $name = htmlspecialchars($name);
+            $message = htmlspecialchars($message);
+            $phone = urldecode($phone);
+            $name = urldecode($name);
+            $message = urldecode($message);
+            $phone = trim($phone);
+            $name = trim($name);
+            $message = trim($message);
+            if (mail("most_wanted174@mail.ru", "Заявка с сайта", "Тел:".$phone.". Имя: ".$name.". Сообщение: ".$message , "From: info@mostwanted174.ru \r\n")){
+            echo "Сообщение успешно отправлено";
+            } else {
+            echo "При отправке сообщения возникли ошибки";
+            }
+            }
+          ?>
       </section>
     </main>
 
